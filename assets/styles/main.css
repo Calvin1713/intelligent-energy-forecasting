@@ -331,91 +331,199 @@ html, body, [class*="css"] {
   box-shadow: var(--shadow-sm) !important;
 }
 
+/* =========================================
+   FIX: INPUT FIELD TEXT VISIBILITY
+   ========================================= */
 
-/* ==========================================================
-   STREAMLIT WIDGET CONTRAST FIX
-   Light controls use dark text; navy controls use white text.
-   ========================================================== */
-
-/* SIDEBAR: building selector — white background, dark text */
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div {
-    background: #FFFFFF !important;
-    border-color: #CBD5E1 !important;
-}
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] div,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] span {
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
-}
-
-/* SIDEBAR: analysis date range — white background, dark text */
-[data-testid="stSidebar"] [data-testid="stDateInput"] input,
-[data-testid="stSidebar"] [data-testid="stDateInput"] [data-baseweb="input"] input {
-    background: #FFFFFF !important;
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
-    opacity: 1 !important;
-    caret-color: #0F172A !important;
-}
-
-/* MAIN: Prediction Lab target date — navy background, white text */
-[data-testid="stMain"] [data-testid="stDateInput"] input,
-[data-testid="stMain"] [data-testid="stDateInput"] [data-baseweb="input"] input {
-    background: #111827 !important;
+/* Text, number, date and time inputs */
+.stTextInput input,
+.stNumberInput input,
+.stDateInput input,
+.stTimeInput input,
+.stTextArea textarea,
+[data-baseweb="input"] input,
+[data-baseweb="textarea"] textarea {
     color: #FFFFFF !important;
     -webkit-text-fill-color: #FFFFFF !important;
-    opacity: 1 !important;
+    background-color: #111827 !important;
     caret-color: #FFFFFF !important;
 }
 
-/* MAIN: dark text/number/textarea inputs */
-[data-testid="stMain"] [data-testid="stTextInput"] input,
-[data-testid="stMain"] [data-testid="stNumberInput"] input,
-[data-testid="stMain"] [data-testid="stTextArea"] textarea {
-    background: #111827 !important;
+/* Dropdown text */
+[data-baseweb="select"] > div {
     color: #FFFFFF !important;
-    -webkit-text-fill-color: #FFFFFF !important;
-    caret-color: #FFFFFF !important;
 }
 
-/* Keep disabled sidebar values readable */
-[data-testid="stSidebar"] [data-testid="stDateInput"] input:disabled,
-[data-testid="stSidebar"] [data-testid="stSelectbox"] input:disabled {
-    color: #334155 !important;
-    -webkit-text-fill-color: #334155 !important;
-    opacity: 1 !important;
-}
-
-/* Dropdown menus: white background, dark text */
-[data-baseweb="popover"] [role="listbox"],
-[data-baseweb="popover"] [role="option"] {
-    background-color: #FFFFFF !important;
-    color: #0F172A !important;
-}
-[data-baseweb="popover"] [role="option"] * {
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
-}
-
-/* Main input placeholders */
-[data-testid="stMain"] input::placeholder,
-[data-testid="stMain"] textarea::placeholder {
+/* Placeholder text */
+.stTextInput input::placeholder,
+.stNumberInput input::placeholder,
+.stTextArea textarea::placeholder,
+[data-baseweb="input"] input::placeholder {
     color: #AAB7CC !important;
     -webkit-text-fill-color: #AAB7CC !important;
     opacity: 1 !important;
 }
 
-/* Calendar popup: white surface, dark readable text */
-[data-baseweb="popover"] [data-baseweb="calendar"],
-[data-baseweb="popover"] [data-baseweb="calendar"] * {
-    color: #0F172A !important;
-    -webkit-text-fill-color: #0F172A !important;
+/* Disabled input fields */
+.stDateInput input:disabled,
+.stNumberInput input:disabled,
+.stTextInput input:disabled {
+    color: #CBD5E1 !important;
+    -webkit-text-fill-color: #CBD5E1 !important;
+    opacity: 1 !important;
 }
 
-/* Focus state */
-[data-testid="stSidebar"] input:focus,
-[data-testid="stMain"] input:focus,
-[data-testid="stMain"] textarea:focus {
-    border-color: #2563EB !important;
-    box-shadow: 0 0 0 1px #2563EB !important;
+/* Input field focus */
+.stTextInput input:focus,
+.stNumberInput input:focus,
+.stDateInput input:focus,
+.stTextArea textarea:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 1px #3B82F6 !important;
+}
+
+/* =====================================================
+   GLOBAL STREAMLIT WIDGET TEXT VISIBILITY FIX
+   Applies across all dashboard pages
+   ===================================================== */
+
+/* Text, number, date, time and other input fields */
+.stApp input,
+.stApp textarea,
+.stApp select,
+.stApp [data-baseweb="input"] input,
+.stApp [data-baseweb="textarea"] textarea,
+.stApp [data-baseweb="base-input"] input {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* Consistent input backgrounds */
+.stApp [data-baseweb="input"],
+.stApp [data-baseweb="textarea"],
+.stApp [data-baseweb="base-input"] {
+    background-color: #111827 !important;
+}
+
+/* Selectbox and multiselect selected values */
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="select"] input,
+.stApp [data-baseweb="select"] span {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Dropdown menu options */
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    color: #FFFFFF !important;
+}
+
+/* Placeholder text */
+.stApp input::placeholder,
+.stApp textarea::placeholder,
+.stApp [data-baseweb="input"] input::placeholder {
+    color: #AAB7CC !important;
+    -webkit-text-fill-color: #AAB7CC !important;
+    opacity: 1 !important;
+}
+
+/* Disabled input fields */
+.stApp input:disabled,
+.stApp textarea:disabled {
+    color: #CBD5E1 !important;
+    -webkit-text-fill-color: #CBD5E1 !important;
+    opacity: 1 !important;
+}
+
+/* Radio buttons and checkbox labels */
+.stApp [data-testid="stRadio"] label,
+.stApp [data-testid="stCheckbox"] label {
+    color: #1F2937 !important;
+}
+
+/* Date picker calendar text */
+.stApp [data-baseweb="calendar"] *,
+.stApp [data-baseweb="datepicker"] * {
+    color: #FFFFFF !important;
+}
+
+/* Input focus state */
+.stApp input:focus,
+.stApp textarea:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 1px #3B82F6 !important;
+}
+
+/* =====================================================
+   FINAL FIX: CORRECT INPUT CONTRAST BY BACKGROUND
+   ===================================================== */
+
+/* 1. SIDEBAR SELECTBOXES — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.stApp [data-testid="stSidebar"] [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+}
+
+.stApp [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp [data-testid="stSidebar"] [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 2. SIDEBAR DATE RANGE — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stSidebar"] [data-testid="stDateInput"] input {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+    opacity: 1 !important;
+}
+
+/* 3. MAIN PAGE DATE INPUT — DARK BACKGROUND, WHITE TEXT */
+.stApp [data-testid="stMain"] [data-testid="stDateInput"] input {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* 4. MAIN PAGE TEXT AND NUMBER INPUTS — DARK BACKGROUND */
+.stApp [data-testid="stMain"] [data-testid="stTextInput"] input,
+.stApp [data-testid="stMain"] [data-testid="stNumberInput"] input,
+.stApp [data-testid="stMain"] [data-testid="stTextArea"] textarea {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* 5. MAIN PAGE SELECTBOXES — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stMain"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.stApp [data-testid="stMain"] [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+}
+
+.stApp [data-testid="stMain"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp [data-testid="stMain"] [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 6. DROPDOWN MENU OPTIONS */
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 7. PLACEHOLDERS */
+.stApp [data-testid="stMain"] input::placeholder,
+.stApp [data-testid="stMain"] textarea::placeholder {
+    color: #AAB7CC !important;
+    -webkit-text-fill-color: #AAB7CC !important;
+    opacity: 1 !important;
 }
