@@ -381,3 +381,77 @@ html, body, [class*="css"] {
     border-color: #3B82F6 !important;
     box-shadow: 0 0 0 1px #3B82F6 !important;
 }
+
+/* =====================================================
+   GLOBAL STREAMLIT WIDGET TEXT VISIBILITY FIX
+   Applies across all dashboard pages
+   ===================================================== */
+
+/* Text, number, date, time and other input fields */
+.stApp input,
+.stApp textarea,
+.stApp select,
+.stApp [data-baseweb="input"] input,
+.stApp [data-baseweb="textarea"] textarea,
+.stApp [data-baseweb="base-input"] input {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* Consistent input backgrounds */
+.stApp [data-baseweb="input"],
+.stApp [data-baseweb="textarea"],
+.stApp [data-baseweb="base-input"] {
+    background-color: #111827 !important;
+}
+
+/* Selectbox and multiselect selected values */
+.stApp [data-baseweb="select"] > div,
+.stApp [data-baseweb="select"] input,
+.stApp [data-baseweb="select"] span {
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+}
+
+/* Dropdown menu options */
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    color: #FFFFFF !important;
+}
+
+/* Placeholder text */
+.stApp input::placeholder,
+.stApp textarea::placeholder,
+.stApp [data-baseweb="input"] input::placeholder {
+    color: #AAB7CC !important;
+    -webkit-text-fill-color: #AAB7CC !important;
+    opacity: 1 !important;
+}
+
+/* Disabled input fields */
+.stApp input:disabled,
+.stApp textarea:disabled {
+    color: #CBD5E1 !important;
+    -webkit-text-fill-color: #CBD5E1 !important;
+    opacity: 1 !important;
+}
+
+/* Radio buttons and checkbox labels */
+.stApp [data-testid="stRadio"] label,
+.stApp [data-testid="stCheckbox"] label {
+    color: #1F2937 !important;
+}
+
+/* Date picker calendar text */
+.stApp [data-baseweb="calendar"] *,
+.stApp [data-baseweb="datepicker"] * {
+    color: #FFFFFF !important;
+}
+
+/* Input focus state */
+.stApp input:focus,
+.stApp textarea:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 1px #3B82F6 !important;
+}
