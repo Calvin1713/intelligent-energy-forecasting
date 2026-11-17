@@ -1,0 +1,11 @@
+Dataset/*.zip
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+.streamlit/credentials.toml
+.streamlit/secrets.toml

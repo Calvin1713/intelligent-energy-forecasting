@@ -1,0 +1,21 @@
+building_id,site_id,building_id_kaggle,site_id_kaggle,primaryspaceusage,sub_primaryspaceusage,sqm,sqft,lat,lng,timezone,electricity,hotwater,chilledwater,steam,water,irrigation,solar,gas,industry,subindustry,heatingtype,yearbuilt,date_opened,numberoffloors,occupants,energystarscore,eui,site_eui,source_eui,leed_level,rating
+Robin_office_Gayle,Robin,141.0,1.0,Office,Office,4161.0,44789.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,,,,,,,,Education,College/University,Heat network,1919.0,,5.0,,,,,,,
+Robin_office_Victor,Robin,143.0,1.0,Office,Office,3724.0,40085.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,,,,,,,,Education,College/University,Steam,,,4.0,,,,,,,C
+Robin_office_Lindsay,Robin,144.0,1.0,Office,Office,5358.0,57673.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,Yes,,,,,,,Education,College/University,Heat network,,,5.0,,,,,,,C
+Robin_office_Wai,Robin,148.0,1.0,Office,Office,16221.0,174601.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,Yes,,,,,,,Education,College/University,Heat network,1960.0,,12.0,,,,,,,F
+Robin_office_Zelma,Robin,149.0,1.0,Office,Office,7607.0,81881.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,Yes,,,,,,,Education,College/University,Heat network,1960.0,,8.0,,,,,,,F
+Robin_office_Sammie,Robin,155.0,1.0,Office,Office,4802.0,51688.0,51.51878965384613,-0.1345562307692307,Europe/London,Yes,,,,,,,,Education,College/University,Electricity,1930.0,,8.0,,,,,,,F
+Lamb_office_Velma,Lamb,684.0,5.0,Office,Office,14165.0,152471.0,51.49783804108846,-3.186245571244898,Europe/London,Yes,,,,,,,Yes,Government,"City, County, State",Gas,1919.0,,3.0,293.0,,,,,,E
+Lamb_office_Vasiliki,Lamb,685.0,5.0,Office,Office,25087.0,270034.0,51.49783804108846,-3.186245571244898,Europe/London,Yes,,,,,,,Yes,Government,"City, County, State",Gas,1976.0,,5.0,1122.0,,,,,,F
+Lamb_office_Callie,Lamb,692.0,5.0,Office,Office,689.0,7416.0,51.49783804108846,-3.186245571244898,Europe/London,Yes,,,,,,,Yes,Government,"City, County, State",Gas,1976.0,,2.0,,,,,,,C
+Shrew_office_Doris,Shrew,,,Office,Office,22568.9,242930.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,Yes,Government,Other Government Buildings,Gas,,,11.0,410.0,,,,,,G
+Shrew_office_Rose,Shrew,,,Office,Office,1058.0,11388.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,Yes,Government,Other Government Buildings,Gas,,,5.0,46.0,,,,,,E
+Shrew_office_Lin,Shrew,,,Office,Office,13995.0,150641.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,,Government,Other Government Buildings,Gas,1915.0,,10.0,818.0,,,,,,E
+Shrew_office_Kenneth,Shrew,,,Office,Office,1719.0,18503.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,,Government,Other Government Buildings,Electricity,1937.0,,7.0,97.0,,,,,,F
+Shrew_office_Nora,Shrew,,,Office,Office,10203.0,109824.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,Yes,Government,Other Government Buildings,Gas,1906.0,,9.0,393.0,,,,,,F
+Shrew_office_Doug,Shrew,,,Office,Office,5630.0,60601.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,Yes,Government,Other Government Buildings,Gas,1906.0,,10.0,283.0,,,,,,E
+Shrew_office_Sherill,Shrew,,,Office,Office,18098.0,194805.0,51.49984,-0.124663,Europe/London,Yes,,,,,,,,Government,Other Government Buildings,Gas,2000.0,,10.0,721.0,,,,,,E
+Hog_office_Bill,Hog,1086.0,13.0,Office,Office,13375.5,143973.0,44.97878184783975,-93.2553976421019,US/Central,Yes,,,Yes,,,,,,,,,,,,-,182.3,313.8,177.9,,
+Hog_office_Gustavo,Hog,1094.0,13.0,Office,Office,6582.4,70852.0,44.97878184783975,-93.2553976421019,US/Central,Yes,,Yes,Yes,,,,,,,,,,,,27,140.8,213.5,137.8,,
+Hog_office_Alisha,Hog,1113.0,13.0,Office,Office,3103.1,33401.0,44.97878184783975,-93.2553976421019,US/Central,Yes,,,,,,,,,,,,,,,-,275.2,349.1,274.1,,
+Eagle_office_Mable,Eagle,1229.0,14.0,Office,Office,2568.4,27646.0,,,US/Eastern,Yes,Yes,Yes,,,,,,,,,,,,,,,,,,
