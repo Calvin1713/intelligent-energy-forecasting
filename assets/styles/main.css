@@ -455,3 +455,75 @@ html, body, [class*="css"] {
     border-color: #3B82F6 !important;
     box-shadow: 0 0 0 1px #3B82F6 !important;
 }
+
+/* =====================================================
+   FINAL FIX: CORRECT INPUT CONTRAST BY BACKGROUND
+   ===================================================== */
+
+/* 1. SIDEBAR SELECTBOXES — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.stApp [data-testid="stSidebar"] [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+}
+
+.stApp [data-testid="stSidebar"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp [data-testid="stSidebar"] [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 2. SIDEBAR DATE RANGE — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stSidebar"] [data-testid="stDateInput"] input {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+    opacity: 1 !important;
+}
+
+/* 3. MAIN PAGE DATE INPUT — DARK BACKGROUND, WHITE TEXT */
+.stApp [data-testid="stMain"] [data-testid="stDateInput"] input {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* 4. MAIN PAGE TEXT AND NUMBER INPUTS — DARK BACKGROUND */
+.stApp [data-testid="stMain"] [data-testid="stTextInput"] input,
+.stApp [data-testid="stMain"] [data-testid="stNumberInput"] input,
+.stApp [data-testid="stMain"] [data-testid="stTextArea"] textarea {
+    background-color: #111827 !important;
+    color: #FFFFFF !important;
+    -webkit-text-fill-color: #FFFFFF !important;
+    caret-color: #FFFFFF !important;
+}
+
+/* 5. MAIN PAGE SELECTBOXES — WHITE BACKGROUND, DARK TEXT */
+.stApp [data-testid="stMain"] [data-testid="stSelectbox"] [data-baseweb="select"] > div,
+.stApp [data-testid="stMain"] [data-testid="stMultiSelect"] [data-baseweb="select"] > div {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+}
+
+.stApp [data-testid="stMain"] [data-testid="stSelectbox"] [data-baseweb="select"] *,
+.stApp [data-testid="stMain"] [data-testid="stMultiSelect"] [data-baseweb="select"] * {
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 6. DROPDOWN MENU OPTIONS */
+.stApp [role="listbox"],
+.stApp [role="option"] {
+    background-color: #FFFFFF !important;
+    color: #111827 !important;
+    -webkit-text-fill-color: #111827 !important;
+}
+
+/* 7. PLACEHOLDERS */
+.stApp [data-testid="stMain"] input::placeholder,
+.stApp [data-testid="stMain"] textarea::placeholder {
+    color: #AAB7CC !important;
+    -webkit-text-fill-color: #AAB7CC !important;
+    opacity: 1 !important;
+}
