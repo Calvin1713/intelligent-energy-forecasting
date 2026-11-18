@@ -22,10 +22,10 @@ def render_sidebar():
                     <div style="width: 48px; height: 48px;">{svg_data}</div>
                     <div>
                         <div style="font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; color: #FFFFFF; line-height: 1.15;">
-                            ENERGY INTEL
+                            ENERGY INSIGHT
                         </div>
                         <div style="font-size: 0.72rem; color: #38BDF8; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase;">
-                            Analytics Platform
+                            AI & Analytics Platform
                         </div>
                     </div>
                 </div>
@@ -33,12 +33,12 @@ def render_sidebar():
                 unsafe_allow_html=True
             )
         else:
-            st.markdown("### ⚡ ENERGY INTEL")
+            st.markdown("### ⚡ ENERGY INSIGHT")
 
         st.markdown(
             """
             <div style="margin-bottom: 1.2rem;">
-                <span class="platform-badge badge-teal" style="font-size: 0.7rem;">● LIVE M.TECH PLATFORM</span>
+                <span class="platform-badge badge-teal" style="font-size: 0.7rem;">● PROJECT DEMONSTRATION</span>
             </div>
             """,
             unsafe_allow_html=True
@@ -99,8 +99,8 @@ def render_sidebar():
         st.markdown(
             """
             <div style="font-size: 0.72rem; color: #64748B; text-align: center; margin-top: 1rem;">
-                BDG2 Energy Intelligence Project<br>
-                M.Tech Data Science Project Platform
+                Intelligent Energy Forecasting System<br>
+                Machine Learning & Energy Analytics
             </div>
             """,
             unsafe_allow_html=True
