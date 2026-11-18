@@ -527,3 +527,28 @@ html, body, [class*="css"] {
     -webkit-text-fill-color: #AAB7CC !important;
     opacity: 1 !important;
 }
+
+/* Sidebar input contrast fix — targeted controls only */
+
+/* Building dropdown */
+[data-testid="stSidebar"] [data-testid="stSelectbox"] div[data-baseweb="select"] > div {
+    background-color: #1E293B !important;
+    border: 1px solid #475569 !important;
+}
+
+[data-testid="stSidebar"] [data-testid="stSelectbox"] div[data-baseweb="select"] * {
+    color: #F8FAFC !important;
+}
+
+/* Date range input */
+[data-testid="stSidebar"] [data-testid="stDateInput"] input {
+    background-color: #1E293B !important;
+    color: #F8FAFC !important;
+    border: 1px solid #475569 !important;
+    -webkit-text-fill-color: #F8FAFC !important;
+}
+
+/* Date picker calendar icon */
+[data-testid="stSidebar"] [data-testid="stDateInput"] button {
+    color: #CBD5E1 !important;
+}
