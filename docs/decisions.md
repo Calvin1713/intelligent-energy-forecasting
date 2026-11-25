@@ -67,7 +67,10 @@ The excluded buildings stay in the audit notebook as the data-quality case study
 - The plan's "13 live buildings" becomes **12** everywhere (README, posts, week-5 comparison).
 - Headline MAE will rise; that is the true error on buildings with working meters. WAPE becomes the headline metric
   from week 5 because it reads as a percentage and is not shrunk by free zeros.
-- Week 4: `data.py` applies this rule (`energy.quality.invalid_mask`) instead of a hard-coded exclusion list only.
+- Week 4 (implemented): `energy.data.load_consumption()` drops the 8 buildings and sets invalid hours to NaN
+  (26,954 of 210,528 hours). Rows are kept, so lags of a masked hour are missing. Rolling means need 75 % of their
+  window valid (with 100 %, 10.6 % of usable rows would lose the weekly mean; with 75 %, 3.9 %). Training drops rows
+  by a missing target only; XGBoost handles missing features.
 
 ### Open question
 
