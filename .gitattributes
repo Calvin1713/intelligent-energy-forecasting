@@ -1,0 +1,7 @@
+# Store text files with LF in the repository; Git converts them on checkout as your settings say.
+* text=auto eol=lf
+*.png binary
+*.joblib binary
+*.parquet binary
+*.bat text eol=crlf
+*.ps1 text eol=crlf

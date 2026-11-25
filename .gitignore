@@ -15,3 +15,7 @@ data/raw/
 reports/tmp/
 .pytest_cache/
 .ipynb_checkpoints/
+
+# Week 4
+mlruns/
+.venv/

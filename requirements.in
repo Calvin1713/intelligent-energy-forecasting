@@ -1,0 +1,13 @@
+# Direct dependencies of the package, tests and app. Exact tested versions: requirements.lock
+# (Streamlit Cloud still installs from requirements.txt.)
+pandas
+numpy
+pyarrow
+scikit-learn
+xgboost
+pyyaml
+joblib
+streamlit
+plotly
+pytest
+matplotlib

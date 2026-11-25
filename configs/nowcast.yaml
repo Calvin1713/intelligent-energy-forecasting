@@ -1,0 +1,14 @@
+# Next-hour model. xgb_params are the prototype's settings, read from saved_models/model.joblib (v0.1-colab)
+# on 2026-11-25. The prototype also median-imputed and scaled the numeric features and one-hot encoded
+# building_id; the rebuild drops those steps because XGBoost handles missing values and categories itself.
+name: nowcast
+horizon: 1
+test_fraction: 0.2
+xgb_params:
+  n_estimators: 400
+  max_depth: 7
+  learning_rate: 0.04
+  subsample: 0.85
+  colsample_bytree: 0.85
+  random_state: 42
+  n_jobs: -1
