@@ -1,0 +1,4 @@
+# Test configuration only. Dependencies stay in requirements.txt, which Streamlit Cloud reads.
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
