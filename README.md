@@ -6,6 +6,12 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Regressor-179C52.svg)
 ![License](https://img.shields.io/badge/Project-M.Tech%20Data%20Science-7C3AED.svg)
 
+> **Status (v0.1-colab → v1.0 in progress).** The results below come from the Colab prototype and are being rebuilt
+> as reproducible code. **Data quality:** an audit found 7 Shrew buildings reading 0 kWh from early 2017 and
+> Lamb_office_Callie stuck at one value for 90 % of its test period; together they are 40 % of the prototype's test rows
+> and make the MAE below look better than it is. v1.0 models 12 buildings and masks zero or stuck hours as missing.
+> See [the audit notebook](notebooks/01_data_audit.ipynb) and [decision D-001](docs/decisions.md).
+
 ---
 
 ## 🏢 Project Overview
@@ -22,8 +28,8 @@ Built as an **M.Tech Data Science Capstone Project**, the platform shifts away f
 - **Source:** Building Data Genome Project 2 (BDG2), an open-source dataset curated by the Building and Urban Data Science (BUDS) Lab at the National University of Singapore.
 - **Analyzed Portfolio:** 20 verified commercial office facilities across 5 campus sites (`Robin`, `Lamb`, `Shrew`, `Hog`, `Eagle`).
 - **Temporal Horizon:** 2 full calendar years of continuous hourly electricity meter readings (Jan 1, 2016 00:00 to Dec 31, 2017 23:00).
-- **Total Valid Records:** 350,880 hourly observations (17,544 readings per facility).
-- **Measurement Unit:** Hourly electricity meter reading ($\text{kWh}$).
+- **Total Records:** 350,880 hourly observations (17,544 per facility); about 25 % are zero or stuck readings, see the [data audit](notebooks/01_data_audit.ipynb).
+- **Measurement Unit:** kWh: the electricity used during each hour (BDG2 converts every site to kWh; see [data/README.md](data/README.md)). A reading in kWh per hour is also the average demand in kW over that hour.
 
 ### 2. Feature Engineering Pipeline
 The predictive models leverage a 15-dimensional feature space engineered to capture short-term persistence, diurnal cycles, and weekly seasonality:
@@ -42,7 +48,9 @@ The predictive models leverage a 15-dimensional feature space engineered to capt
   - `building_id` (one-hot encoded categorical identifier).
 
 ### 3. Model Benchmark Results (Testing Set: 69,520 Observations)
-Models were evaluated on the final 20% temporal split for each facility (Aug 9, 2017 to Dec 31, 2017):
+Models were evaluated on the final 20% temporal split for each facility (Aug 9, 2017 to Dec 31, 2017).
+*Prototype numbers, kept for comparison: they include the dead meters described in the status note, and the
+baseline shown is the weakest one. Week 5 of the rebuild replaces this table.*
 
 | Rank | Model Architecture | MAE ($\text{kWh}$) | RMSE ($\text{kWh}$) | $R^2$ Score | Status |
 |:---:|:---|:---:|:---:|:---:|:---:|
@@ -102,14 +110,14 @@ The platform follows a modular, production-ready architecture:
 ## 🚀 Installation & Execution
 
 ### 1. Prerequisites
-- Python 3.10, 3.11, 3.12, or 3.13
+- Python 3.11, 3.12, or 3.13
 - Git
 
 ### 2. Clone and Setup Environment
 ```bash
 # Clone the repository
-git clone https://github.com/Calvin/Intelligent_Energy_Forecasting.git
-cd Intelligent_Energy_Forecasting
+git clone https://github.com/Calvin1713/intelligent-energy-forecasting.git
+cd intelligent-energy-forecasting
 
 # Create a virtual environment
 python -m venv venv
@@ -122,6 +130,10 @@ source venv/bin/activate
 
 # Install required dependencies
 pip install -r requirements.txt
+
+# Run the tests
+pip install pytest
+python -m pytest -q
 ```
 
 ### 3. Launch the Platform

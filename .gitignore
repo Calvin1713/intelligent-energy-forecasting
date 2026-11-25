@@ -9,3 +9,9 @@ env/
 !.env.example
 .streamlit/credentials.toml
 .streamlit/secrets.toml
+
+# Week 3: raw downloads and scratch output
+data/raw/
+reports/tmp/
+.pytest_cache/
+.ipynb_checkpoints/
